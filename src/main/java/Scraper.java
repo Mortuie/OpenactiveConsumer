@@ -1,12 +1,14 @@
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.SneakyThrows;
 import models.User;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import services.ElasticsearchService;
 
 import java.util.List;
 
@@ -18,20 +20,20 @@ public class Scraper extends Thread {
         JsonGenerator.Feature.IGNORE_UNKNOWN, true
     );
 
+    @SneakyThrows
     public void run() {
         CloseableHttpClient client = HttpClientBuilder.create().build();
-
+        ElasticsearchService service = ElasticsearchService.getEsService();
         try {
             CloseableHttpResponse response = client.execute(new HttpGet(url));
 
             String bodyAsString = EntityUtils.toString(response.getEntity());
             List<User> users = objectMapper.readValue(bodyAsString, new TypeReference<>() {});
-            for (User user: users) {
-                System.out.println(user.getId());
-            }
+            service.insertBulkUser("users", users);
         } catch (Exception e) {
             System.out.println("\n\n\nMEMES");
             System.out.println(e);
+            throw e;
         }
     }
 }

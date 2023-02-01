@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93a6bfe5-0acf-4ee1-a98b-5c73069ae118" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entrypoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entrypoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Scraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ElasticsearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ElasticsearchService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <workItem from="1674642170162" duration="183000" />
       <workItem from="1674642374493" duration="6102000" />
       <workItem from="1675245518175" duration="1858000" />
-      <workItem from="1675247585956" duration="4903000" />
+      <workItem from="1675247585956" duration="6550000" />
     </task>
     <servers />
   </component>
