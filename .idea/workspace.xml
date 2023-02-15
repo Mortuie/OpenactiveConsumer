@@ -5,12 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93a6bfe5-0acf-4ee1-a98b-5c73069ae118" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/OpenActiveConsumerAndApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/OpenActiveConsumerAndApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/services/ElasticsearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/services/ElasticsearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/apiconsumerinone/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Scraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Scraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/OpenActiveConsumerAndApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/openactiveconsumerandapi/OpenActiveConsumerAndApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/openactiveconsumerandapi/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/models/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/openactiveconsumerandapi/models/BaseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/models/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/openactiveconsumerandapi/models/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/routes/Ping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/openactiveconsumerandapi/routes/Ping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/scheduledTasks/UrlScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/openactiveconsumerandapi/scheduledTasks/UrlScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/java/com/example/openactiveconsumerandapi/services/ElasticsearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/openactiveconsumerandapi/services/ElasticsearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiconsumerinone/src/test/java/com/example/openactiveconsumerandapi/OpenActiveConsumerAndApiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/openactiveconsumerandapi/OpenActiveConsumerAndApiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entrypoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Scraper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/databaseConnections/ElasticsearchClientSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/RpdeFeed.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ElasticsearchService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Sleep.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,26 +87,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/leonbo/programming/OpenactiveConsumerProject&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/leonbo/programming/OpenactiveConsumerProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.general",
+    "spring.configuration.checksum": "56dec511974d69ec165536b154791aba",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.OpenActiveConsumerAndApiApplication">
     <configuration name="Entrypoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Entrypoint" />
       <module name="OpenactiveConsumerProject.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpenActiveConsumerAndApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="OpenActiveConsumerAndApi.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.openactiveconsumerandapi.OpenActiveConsumerAndApiApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,7 +141,8 @@
       <workItem from="1675247585956" duration="8510000" />
       <workItem from="1675258894373" duration="1632000" />
       <workItem from="1676034102539" duration="18000" />
-      <workItem from="1676458197169" duration="4547000" />
+      <workItem from="1676458197169" duration="4872000" />
+      <workItem from="1676466531373" duration="125000" />
     </task>
     <servers />
   </component>

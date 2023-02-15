@@ -26,12 +26,4 @@ public class Config {
 
         return new ElasticsearchClient(elasticsearchTransport);
     }
-
-//
-//    @Bean
-//    public ObjectMapper getObjectMapper() {
-//        return new ObjectMapper().configure(
-//            JsonGenerator.Feature.IGNORE_UNKNOWN, true
-//        );
-//    }
 }
