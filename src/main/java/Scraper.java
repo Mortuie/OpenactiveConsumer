@@ -29,7 +29,7 @@ public class Scraper extends Thread {
 
             String bodyAsString = EntityUtils.toString(response.getEntity());
             List<User> users = objectMapper.readValue(bodyAsString, new TypeReference<>() {});
-            service.insertBulkUser("users", users);
+            service.insertBulkUser("users", users) ;
         } catch (Exception e) {
             System.out.println("\n\n\nMEMES");
             System.out.println(e);
