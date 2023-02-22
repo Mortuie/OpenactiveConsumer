@@ -1,6 +1,7 @@
 package com.example.openactiveconsumerandapi.scheduledTasks;
 
 
+import com.example.openactiveconsumerandapi.models.RpdeFeed;
 import com.example.openactiveconsumerandapi.models.Users;
 import com.example.openactiveconsumerandapi.services.ElasticsearchService;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -19,8 +20,9 @@ import java.util.List;
 @Configuration
 @EnableScheduling()
 public class UrlScraper  {
-    private static final String url = "https://gorest.co.in/public/v2/users";
-    //    private final static String url = "https://opendata.leisurecloud.live/api/feeds/Oxford-Univesity-live-facility-uses";
+//    https://oxforduniversity.leisurecloud.net/OpenActive/
+//    private static final String url = "https://gorest.co.in/public/v2/users";
+    private final static String url = "https://opendata.leisurecloud.live/api/feeds/Oxford-Univesity-live-facility-uses";
     private ObjectMapper objectMapper;
     private ElasticsearchService elasticsearchService;
 
@@ -37,8 +39,9 @@ public class UrlScraper  {
             CloseableHttpResponse response = client.execute(new HttpGet(url));
 
             String bodyAsString = EntityUtils.toString(response.getEntity());
-            List<Users> users = objectMapper.readValue(bodyAsString, new TypeReference<>() {});
-            elasticsearchService.saveObjectsToIndex(ElasticsearchService.USERS_INDEX, users);
+            RpdeFeed users = objectMapper.readValue(bodyAsString, new TypeReference<>() {});
+            System.out.println(users);
+//            elasticsearchService.saveObjectsToIndex(ElasticsearchService.USERS_INDEX, users);
         } catch (Exception e) {
             System.out.println("\n\nERROR\n\n");
             System.out.println(e);

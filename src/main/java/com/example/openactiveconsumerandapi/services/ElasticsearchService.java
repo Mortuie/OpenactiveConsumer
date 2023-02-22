@@ -21,14 +21,14 @@ import java.util.List;
 @Component
 @Slf4j
 public class ElasticsearchService {
-    public final static String USERS_INDEX = "users";
     private final ElasticsearchClient esClient;
     private final ObjectMapper objectMapper;
-    private final List<String> neededIndicies = List.of(USERS_INDEX);
+    private final List<String> neededIndicies;
 
-    public ElasticsearchService(ElasticsearchClient esClient, ObjectMapper objectMapper) {
+    public ElasticsearchService(ElasticsearchClient esClient, ObjectMapper objectMapper, List<String> neededIndicies) {
         this.esClient = esClient;
         this.objectMapper = objectMapper;
+        this.neededIndicies = neededIndicies;
     }
 
     @PostConstruct
