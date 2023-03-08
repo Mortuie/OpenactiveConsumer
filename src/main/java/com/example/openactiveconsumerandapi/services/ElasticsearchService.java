@@ -8,10 +8,12 @@ import co.elastic.clients.elasticsearch.core.IndexResponse;
 import co.elastic.clients.elasticsearch.core.bulk.BulkResponseItem;
 import co.elastic.clients.elasticsearch.indices.CreateIndexRequest;
 import co.elastic.clients.elasticsearch.xpack.usage.Base;
+import com.example.openactiveconsumerandapi.config.ElasticSearchIndexes;
 import com.example.openactiveconsumerandapi.models.BaseModel;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -25,10 +27,10 @@ public class ElasticsearchService {
     private final ObjectMapper objectMapper;
     private final List<String> neededIndicies;
 
-    public ElasticsearchService(ElasticsearchClient esClient, ObjectMapper objectMapper, List<String> neededIndicies) {
+    public ElasticsearchService(ElasticsearchClient esClient, ObjectMapper objectMapper) {
         this.esClient = esClient;
         this.objectMapper = objectMapper;
-        this.neededIndicies = neededIndicies;
+        this.neededIndicies = ElasticSearchIndexes.getNeededIndicies();
     }
 
     @PostConstruct
@@ -49,12 +51,18 @@ public class ElasticsearchService {
         }
     }
 
-    public void saveObjectToIndex(String index, BaseModel obj) throws IOException {
-        IndexResponse response = esClient.index(i -> i
-            .index(index)
-            .id(obj.getId())
-            .document(obj)
-        );
+    public <T extends BaseModel> void saveObjectToIndex(String index, T obj) throws IOException {
+        try {
+            esClient.index(i -> i
+                .index(index)
+                .id(obj.getId())
+                .document(obj)
+            );
+        } catch (Exception e) {
+            System.out.println("memes");
+            e.printStackTrace();
+            throw e;
+        }
     }
 
     public void saveObjectsToIndex(String index, List<? extends BaseModel> objectList) throws IOException {

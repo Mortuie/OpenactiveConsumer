@@ -6,13 +6,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-import java.util.List;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder(toBuilder = true)
-public class RpdeFeed {
-    private String next;
-    private List<FacilityUse> items;
+public class FeedMetadata extends BaseModel {
+    private String nextUrl;
+    private LocalDateTime nextFetchTime;
 }

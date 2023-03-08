@@ -7,9 +7,10 @@ import java.util.List;
 @Configuration
 public class ElasticSearchIndexes {
     public final static String DATA_FEEDS_INDEX = "data_feeds_index";
-    private final List<String> neededIndicies = List.of(DATA_FEEDS_INDEX);
+    public final static String FACILITY_USE_INDEX = "facility_use_index";
+    private final static List<String> neededIndicies = List.of(DATA_FEEDS_INDEX);
 
-    public List<String> getNeededIndicies() {
+    public static List<String> getNeededIndicies() {
         return neededIndicies;
     }
 }

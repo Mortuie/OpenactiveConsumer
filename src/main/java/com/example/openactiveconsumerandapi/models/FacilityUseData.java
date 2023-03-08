@@ -7,8 +7,7 @@ import lombok.experimental.SuperBuilder;
 @Data
 @NoArgsConstructor
 @SuperBuilder(toBuilder = true)
-public class FacilityUseData {
-    private String id;
+public class FacilityUseData extends BaseModel {
     private String type;
     private String name;
     private String attendeeInstructions;
