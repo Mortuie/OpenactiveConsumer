@@ -2,6 +2,7 @@ package com.example.openactiveconsumerandapi.scheduledTasks;
 
 
 import com.example.openactiveconsumerandapi.config.ElasticSearchIndexes;
+import com.example.openactiveconsumerandapi.models.FacilityUse;
 import com.example.openactiveconsumerandapi.models.FeedMetadata;
 import com.example.openactiveconsumerandapi.models.RpdeFeed;
 import com.example.openactiveconsumerandapi.services.ElasticsearchService;
@@ -12,14 +13,12 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-
+import java.util.List;
+import java.util.stream.Collectors;
 
 @EnableScheduling
 public class UrlScraper  {
@@ -33,7 +32,7 @@ public class UrlScraper  {
 
 
     @Scheduled(fixedDelay = 1000)
-    public void memes() {
+    public void scrapeUrl() {
         CloseableHttpClient client = HttpClientBuilder.create().build();
         String tempUrl = "https://opendata.leisurecloud.live/api/feeds/Oxford-Univesity-live-facility-uses";
         try {
@@ -43,6 +42,16 @@ public class UrlScraper  {
                 String bodyAsString = EntityUtils.toString(response.getEntity());
                 RpdeFeed rpdeFeed = objectMapper.readValue(bodyAsString, new TypeReference<>() {});
                 tempUrl = rpdeFeed.getNext();
+                List<FacilityUse> facilityUseList = rpdeFeed.getItems().stream().map(
+                    facilityUse -> facilityUse.toBuilder()
+                        .id(facilityUse.getData().getId())
+                        .data(facilityUse.getData())
+                        .modified(facilityUse.getModified())
+                        .kind(facilityUse.getKind())
+                        .state(facilityUse.getState())
+                        .build()
+                ).collect(Collectors.toList());
+                elasticsearchService.saveObjectsToIndex(ElasticSearchIndexes.FACILITY_USE_INDEX, facilityUseList);
                 int sizeOfFeed = rpdeFeed.getItems().size();
                 if (sizeOfFeed == 0) {
                     System.out.println("No more items left...");

@@ -65,7 +65,7 @@ public class ElasticsearchService {
         }
     }
 
-    public void saveObjectsToIndex(String index, List<? extends BaseModel> objectList) throws IOException {
+    public <T extends BaseModel> void saveObjectsToIndex(String index, List<T> objectList) throws IOException {
         BulkRequest.Builder br = new BulkRequest.Builder();
 
         for (BaseModel obj: objectList) {

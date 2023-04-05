@@ -7,7 +7,7 @@ import lombok.experimental.SuperBuilder;
 @Data
 @NoArgsConstructor
 @SuperBuilder(toBuilder = true)
-public class FacilityUse {
+public class FacilityUse extends BaseModel {
     private Long modified;
     private String kind;
     private String state;
